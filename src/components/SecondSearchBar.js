@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const SecondSearchBar = () => {
+const SecondSearchBar = ({users}) => {
     return (
      
         <div className="search_1">
@@ -15,8 +15,12 @@ const SecondSearchBar = () => {
                 <input className="input-field input_2 ml-4" size="15" type="text" placeholder="Find in list" />
             </div>
 
-            <div className="dropdown">
-                <button className="btn btn-secondary dropdown-toggle" type="button"
+            <div className="dropdownSelect">
+                <select>
+                    <option>country</option>
+                    {users.map((user, i )=> <option key={i}>{user.location.country}</option>)}
+                </select>
+                {/* <button className="btn btn-secondary dropdown-toggle" type="button"
                  id="dropdownMenuButton" 
                 data-toggle="dropdown" aria-haspopup="true"
                  aria-expanded="false">
@@ -27,8 +31,8 @@ const SecondSearchBar = () => {
                     <a className="dropdown-item" href="#">Action</a>
                     <a className="dropdown-item" href="#">Another action</a>
                     <a className="dropdown-item" href="#">Something else here</a>
-                </div>
-            </div>
+    </div>*/}
+            </div> 
             <div>
                 <label><input type="radio" name="btn" />Show country</label>
             </div>

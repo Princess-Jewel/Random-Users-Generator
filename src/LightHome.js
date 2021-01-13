@@ -2,7 +2,7 @@ import React from 'react'
 import SecondSearchBar from './components/SecondSearchBar'
 import Profile from './components/Profile'
 
-const LightHome = () => {
+const LightHome = ({users}) => {
     return (
         <div className="light-home_1" style={{ background: "#F7F7FF" }}>
             <div className="light-home">
@@ -10,11 +10,11 @@ const LightHome = () => {
                 <p>Filter by</p>
             </div>
             <div>
-                <SecondSearchBar />
+                <SecondSearchBar users={users} />
             </div>
 
             <div>
-                <Profile />
+                <Profile users={users} />
             </div>
             <div className="download">
                 <div className="result pt-3">
